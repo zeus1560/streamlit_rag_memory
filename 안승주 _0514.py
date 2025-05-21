@@ -46,7 +46,7 @@ def get_vectorstore(_docs):
 
 @st.cache_resource
 def initialize_components(selected_model):
-    file_path = "data\헌법.pdf"  
+    file_path = "data/헌법.pdf"  
     pages = load_and_split_pdf(file_path)
     vectorstore = get_vectorstore(pages)
     retriever = vectorstore.as_retriever()
